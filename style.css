@@ -40,6 +40,7 @@ header{
     text-align: center;
 
     margin: 80px 0 60px 0;
+    padding: 0 420px;
 }
 
 section{
@@ -94,3 +95,44 @@ section{
     border-top: 4px solid hsl(34, 97%, 64%);
 }
 
+/*---------------------------------------mobile settings------------------------------------*/
+
+@media(max-width : 800px){
+
+    .big_header{
+        font-size: 25px;
+    }
+
+    .normal_txt{
+        font-size: 13px;
+
+        margin: 5px 0 30px 0;
+    }
+
+    header{
+        padding: 0 30px;
+    }
+
+    section{
+        /*we define section as a grid with 4 rows and 1 column*/
+        grid-template-rows: repeat(4, 240px);
+        grid-template-columns: 300px;
+    }
+
+    /*here we fix the cards positions*/
+    #supervisor{
+        grid-area: 1 / 1 / 2 / 1;
+    }
+    
+    #team_builder{
+        grid-area: 2 / 1 / 3 / 1;
+    }
+    
+    #calculator{
+        grid-area: 4 / 1 / 5 / 1;
+    }
+    
+    #karma{
+        grid-area: 3 / 1 / 4 / 1;
+    }
+}
